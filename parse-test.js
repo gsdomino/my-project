@@ -7,10 +7,13 @@ $(function() {
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
     testObject.set("middle", "Steven");
-    testObject.save({foo: "bar", myData: "Domino", address: "6 Braemer"}).then(function(object) {
-      alert("yay! it worked");
+    testObject.save({foo: "bar", myData: "Domino", address: "6 Braemer"}).then(function(object) 		{
+      alert("yay! it worked")
+      }). then(function(object) 
+{
+			console.log(testObject.id);
     });
-    console.log(testObject.id);
+    
     
     var query = new Parse.Query(TestObject);
 		query.get(testObject.id, {
