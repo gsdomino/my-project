@@ -10,7 +10,7 @@ $(function() {
     testObject.save({foo: "bar", myData: "Domino", address: "6 Braemer"}).then(function(object) {
       alert("yay! it worked");
     });
-    console.log(testObject);
+    console.log(testObject.id);
     
     var query = new Parse.Query(TestObject);
 		query.get(testObject.id, {
