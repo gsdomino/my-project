@@ -11,7 +11,8 @@ $(function() {
     	foo: "bar", 
     	myName: "Smith", 
     	myAddress: "8 Braemer",
-    	myCity: "New Jack"}).then(function(object) 					{
+    	myCity: "New Jack",
+    	myState: "Confusion"}).then(function(object) 					{
     alert("yay! it worked")
     	}). then(function(object) {
 				console.log(testObject);  
