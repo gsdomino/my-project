@@ -11,13 +11,10 @@ $(function() {
       alert("yay! it worked")
       }). then(function(object) 
 {
-			console.log(testObject.id);
-    });
-    
-    
-    var query = new Parse.Query(TestObject);
-		query.get(testObject.id, {
-  		success: function(testObject) {
+			console.log(testObject.id);  
+    	var query = new Parse.Query(TestObject);
+			query.get(testObject.id, {
+  			success: function(testObject) {
     	// The object was retrieved successfully.
     		console.log(testObject);
  		 },
@@ -26,6 +23,7 @@ $(function() {
     // error is a Parse.Error with an error code and message.
     		console.log(error);
   }
+});
 });
  
 });
