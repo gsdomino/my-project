@@ -12,7 +12,8 @@ $(function() {
     	myName: "Smith", 
     	myAddress: "8 Braemer",
     	myCity: "New Jack",
-    	myState: "Confusion"}).then(function(object) 					{
+    	myState: "Confusion",
+    	myCountry: "Good Ol USA"}).then(function(object) 					{
     alert("yay! it worked")
     	}). then(function(object) {
 				console.log(testObject);  
