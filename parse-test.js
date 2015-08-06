@@ -13,7 +13,7 @@ $(function() {
     console.log(testObject);
     
     var query = new Parse.Query(TestObject);
-		query.get("wghfdXS0bm", {
+		query.get(testObject.id, {
   		success: function(testObject) {
     	// The object was retrieved successfully.
     		console.log(testObject);
