@@ -7,19 +7,9 @@ $(function() {
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
     testObject.set("middle", "Steven");
-    testObject.save({foo: "bar", myName: "Smith", myAddress: "8 Braemer"}).then(function(object) 					{alert("yay! it worked")}). then(function(object) {
-				console.log(object);  
-    		var query = new Parse.Query(TestObject);
-				query.get(object.id, {
-  			success: function(testObject) {
-    	// The object was retrieved successfully.
-    		console.log(testObject);
- 		 },
-  			error: function(object, error) {
-    // The object was not retrieved successfully.
-    // error is a Parse.Error with an error code and message.
-    		console.log(error);
-  }
-			});
-});
+    testObject.save({foo: "bar", myName: "Smith", myAddress: "8 Braemer"}).then(function(object) 					{
+    alert("yay! it worked")
+    	}). then(function(object) {
+				console.log(testObject);  
+    		
 });
