@@ -6,6 +6,7 @@ $(function() {
  
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
+    testObject.set("middle", "Steven");
     testObject.save({foo: "bar", myData: "Domino"}).then(function(object) {
       alert("yay! it worked");
     });
