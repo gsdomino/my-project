@@ -11,7 +11,7 @@ $(function() {
       alert("yay! it worked")
       }). then(function(object) 
 {
-			console.log(object.id);  
+			console.log(testObject);  
     	var query = new Parse.Query(TestObject);
 			query.get(object.id, {
   			success: function(testObject) {
