@@ -7,13 +7,13 @@ $(function() {
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
     testObject.set("middle", "Steven");
-    testObject.save({foo: "bar", myData: "Domino", address: "8 Braemer"}).then(function(object) 		{
+    testObject.save({foo: "bar", myName: "Smith", myAddress: "8 Braemer"}).then(function(object) 		{
       alert("yay! it worked")
       }). then(function(object) 
 {
-			console.log(testObject.id);  
+			console.log(object.id);  
     	var query = new Parse.Query(TestObject);
-			query.get(testObject.id, {
+			query.get(object.id, {
   			success: function(testObject) {
     	// The object was retrieved successfully.
     		console.log(testObject);
