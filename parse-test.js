@@ -11,5 +11,18 @@ $(function() {
       alert("yay! it worked");
     });
     console.log(testObject);
+    
+    var query = new Parse.Query(TestObject);
+		query.get("wghfdXS0bm", {
+  		success: function(testObject) {
+    	// The object was retrieved successfully.
+    		console.log(testObject);
+ 		 },
+  		error: function(object, error) {
+    // The object was not retrieved successfully.
+    // error is a Parse.Error with an error code and message.
+    		console.log(error);
+  }
+});
  
 });
