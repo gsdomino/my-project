@@ -14,7 +14,7 @@ $(function() {
     	myCity: "New Jack",
     	myState: "Confusion",
     	myCountry: "Good Ol USA",
-    	planet: "Earth"}).then(function(testObjecy) 					{
+    	planet: "Earth"}).then(function(object) 					{
     alert("yay! it worked")
     	}). then(function(object) {
 				console.log(testObject.id);  
