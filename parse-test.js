@@ -13,7 +13,8 @@ $(function() {
     	myAddress: "8 Braemer",
     	myCity: "New Jack",
     	myState: "Confusion",
-    	myCountry: "Good Ol USA"}).then(function(object) 					{
+    	myCountry: "Good Ol USA",
+    	planet: "Earth"}).then(function(object) 					{
     alert("yay! it worked")
     	}). then(function(object) {
 				console.log(testObject);  
