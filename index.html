@@ -1,1 +1,68 @@
-<h2>HELLO HELLO WORLD!</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Parse Test Page</title>
+	</head>
+  <body>
+		<h2>HELLO HELLO AGAIN WORLD!</h2>
+		<h3>Hi there!<h3>
+		<ul>
+			<li>Hello 1</li>
+			<li>Hello 2</li>
+		</ul>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js" type="text/javascript"></script>
+	<script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="parse-test.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('ul').append("<li>'looks really good'</li>");
+			console.log("looks good");
+			$.ajax({
+				type: 'GET',
+				headers: {'X-Parse-Application-Id':'t7j3bcOoZU9elelY9a9kZP5iOwwyNMfTc58pc3kc','X-Parse-REST-API-Key':'YPsSbIOkSk51vyw7Pf0HvDJz7mkP0Y0bpJXwIy1f'},
+				url: "https://api.parse.com/1/classes/TestObject",
+				//data: 'where={"username":"someUser"}',
+				contentType: "application/json",
+				data: 'where={"myName":"Jones"}',
+				success: function(data) {
+					console.log(data);
+					}
+			});
+
+			
+			
+			
+			
+			
+			
+			
+			
+			/*var KermitModel = Backbone.Model.extend({
+					url: 'https://api.parse.com/1/classes/TestObject/1',
+					defaults: {
+						id: null,
+						name: null,
+						occupation: null
+				}
+				})
+			var kermit = new KermitModel();
+			kermit.fetch().then(function() {
+  		kermit.get('myName'); // >> "Kermit"
+  		kermit.get('myAddress'); // >> "being green"
+  		kermit.set('occupation', 'unemployed');
+  		kermit.save();
+});*/
+			})
+	</script>
+	</body>
+</html>
+
