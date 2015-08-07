@@ -18,12 +18,28 @@
 		</ul>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="parse-test.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('ul').append("<li>'working'</li>");
 			console.log("working");
+			var KermitModel = Backbone.Model.extend({
+					url: 'https://api.parse.com/1/classes/TestObject/1',
+					defaults: {
+						id: null,
+						name: null,
+						occupation: null
+				}
+				})
+			var kermit = new KermitModel();
+			kermit.fetch().then(function() {
+  		kermit.get('myName'); // >> "Kermit"
+  		kermit.get('myAddress'); // >> "being green"
+  		kermit.set('occupation', 'unemployed');
+  		kermit.save();
+});
 			})
 	</script>	
 	</body>
