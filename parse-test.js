@@ -16,7 +16,8 @@ $(function() {
     	myCountry: "Good Ol USA",
     	planet: "Earth"}).then(function() 					{
     alert("yay! it worked")
-    	}). then(function() {
+    	}). then(function(object) {
+    		console.log(object);
 				console.log(testObject.id);  
     		
 });
