@@ -14,9 +14,9 @@ $(function() {
     	myCity: "New Jack",
     	myState: "Confusion",
     	myCountry: "Good Ol USA",
-    	planet: "Earth"}).then(function(object) 					{
+    	planet: "Earth"}).then(function() 					{
     alert("yay! it worked")
-    	}). then(function(object) {
+    	}). then(function() {
 				console.log(testObject.id);  
     		
 });
