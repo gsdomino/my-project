@@ -10,14 +10,14 @@ $(function() {
     testObject.save({
     	foo: "bar", 
     	myName: "Smith", 
-    	myAddress: "8 Braemer",
+    	myAddress: "9 Braemer",
     	myCity: "New Jack",
     	myState: "Confusion",
     	myCountry: "Good Ol USA",
-    	planet: "Earth"}).then(function(object) 					{
+    	planet: "Earth"}).then(function(testObjecy) 					{
     alert("yay! it worked")
     	}). then(function(object) {
-				console.log(testObject);  
+				console.log(testObject.id);  
     		
 });
 
